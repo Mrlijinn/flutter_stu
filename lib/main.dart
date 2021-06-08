@@ -4,6 +4,7 @@ import 'Home/View/Hello.dart';
 import 'Home/View/JDBottomNavigationBar.dart';
 import 'Home/View/JDBasicWidge.dart';
 import 'Home/View/JDLayout.dart';
+import 'Home/View/JDPageView.dart';
 
 void main() => runApp(APP());
 
@@ -64,9 +65,7 @@ class Home extends StatelessWidget {
               // Icon(Icons.change_history, size: 128.0, color: Colors.black12,),
               BasicWidge(),
               JDLayoutWidget(),
-              Container(
-                color: Colors.orange,
-              ),
+              PageViewWidget(),
             ],
           ),
           drawer: Drawer(
