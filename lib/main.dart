@@ -3,6 +3,7 @@ import 'Home/View/JDListView.dart';
 import 'Home/View/Hello.dart';
 import 'Home/View/JDBottomNavigationBar.dart';
 import 'Home/View/JDBasicWidge.dart';
+import 'Home/View/JDLayout.dart';
 
 void main() => runApp(APP());
 
@@ -26,7 +27,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return DefaultTabController(length: 3,
+    return DefaultTabController(length: 4,
         child: Scaffold(
           backgroundColor: Colors.grey[100],
           appBar: AppBar(
@@ -53,6 +54,7 @@ class Home extends StatelessWidget {
                 Tab(icon: Icon(Icons.local_florist),),
                 Tab(icon: Icon(Icons.change_history),),
                 Tab(icon: Icon(Icons.directions_bike),),
+                Tab(icon: Icon(Icons.history),),
               ],
             ),
           ),
@@ -61,7 +63,10 @@ class Home extends StatelessWidget {
               JDListView(),
               // Icon(Icons.change_history, size: 128.0, color: Colors.black12,),
               BasicWidge(),
-              Icon(Icons.directions_bike, size: 128.0, color: Colors.black12,),
+              JDLayoutWidget(),
+              Container(
+                color: Colors.orange,
+              ),
             ],
           ),
           drawer: Drawer(
