@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'Home/View/JDListView.dart';
 import 'Home/View/Hello.dart';
 import 'Home/View/JDBottomNavigationBar.dart';
+import 'Home/View/JDBasicWidge.dart';
 
 void main() => runApp(APP());
 
@@ -58,7 +59,8 @@ class Home extends StatelessWidget {
           body: TabBarView(
             children: [
               JDListView(),
-              Icon(Icons.change_history, size: 128.0, color: Colors.black12,),
+              // Icon(Icons.change_history, size: 128.0, color: Colors.black12,),
+              BasicWidge(),
               Icon(Icons.directions_bike, size: 128.0, color: Colors.black12,),
             ],
           ),
