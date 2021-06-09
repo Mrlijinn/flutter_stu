@@ -5,6 +5,7 @@ import 'Home/View/JDBottomNavigationBar.dart';
 import 'Home/View/JDBasicWidge.dart';
 import 'Home/View/JDLayout.dart';
 import 'Home/View/JDPageView.dart';
+import 'Home/View/JDSliverDemo.dart';
 
 void main() => runApp(APP());
 
@@ -15,6 +16,7 @@ class APP extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
+      // home: SliverDemo(),
       theme: ThemeData(
         primarySwatch: Colors.red,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -61,7 +63,8 @@ class Home extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              JDListView(),
+              // JDListView(),
+              SliverDemo(),
               // Icon(Icons.change_history, size: 128.0, color: Colors.black12,),
               BasicWidge(),
               JDLayoutWidget(),
