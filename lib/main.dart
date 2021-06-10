@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jdpay/Home/Components/ComponentsWidget.dart';
 import 'package:jdpay/Home/Form/JDFormWidget.dart';
 import 'package:jdpay/model/post.dart';
 import 'Home/View/JDListView.dart';
@@ -18,13 +19,14 @@ class APP extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: JDNavigatorWidget(),
-      initialRoute: '/form',
+      initialRoute: '/components',
       routes: {
         '/': (context) => JDNavigatorWidget(),
         '/tab': (context) => HomeTabbarController(),
         '/about': (context) => PageWidget(title: 'About'),
         '/home': (context) => PageWidget(title: 'Home'),
         '/form': (context) => JDFormWidget(),
+        '/components': (context) => JDMaterialComponentsWidget(),
       },
       theme: ThemeData(
         primarySwatch: Colors.red,
