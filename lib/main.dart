@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jdpay/Home/Form/JDFormWidget.dart';
 import 'package:jdpay/model/post.dart';
 import 'Home/View/JDListView.dart';
 import 'Home/View/Hello.dart';
@@ -9,7 +10,7 @@ import 'Home/View/JDPageView.dart';
 import 'Home/View/JDSliverDemo.dart';
 import 'Home/View/JDNavigatorWidget.dart';
 
-void main() => runApp(APPOld());
+void main() => runApp(APP());
 
 class APP extends StatelessWidget {
   @override
@@ -17,17 +18,19 @@ class APP extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: JDNavigatorWidget(),
-      initialRoute: '/tab',
+      initialRoute: '/form',
       routes: {
         '/': (context) => JDNavigatorWidget(),
         '/tab': (context) => HomeTabbarController(),
         '/about': (context) => PageWidget(title: 'About'),
         '/home': (context) => PageWidget(title: 'Home'),
+        '/form': (context) => JDFormWidget(),
       },
       theme: ThemeData(
         primarySwatch: Colors.red,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
         splashColor: Colors.white,
+        accentColor: Colors.lightGreen,
       ),
     );
   }
