@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jdpay/model/post.dart';
 import 'Home/View/JDListView.dart';
 import 'Home/View/Hello.dart';
 import 'Home/View/JDBottomNavigationBar.dart';
@@ -6,10 +7,53 @@ import 'Home/View/JDBasicWidge.dart';
 import 'Home/View/JDLayout.dart';
 import 'Home/View/JDPageView.dart';
 import 'Home/View/JDSliverDemo.dart';
+import 'Home/View/JDNavigatorWidget.dart';
 
-void main() => runApp(APP());
+void main() => runApp(APPOld());
 
 class APP extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // home: JDNavigatorWidget(),
+      initialRoute: '/tab',
+      routes: {
+        '/': (context) => JDNavigatorWidget(),
+        '/tab': (context) => HomeTabbarController(),
+        '/about': (context) => PageWidget(title: 'About'),
+        '/home': (context) => PageWidget(title: 'Home'),
+      },
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        splashColor: Colors.white,
+      ),
+    );
+  }
+}
+
+class HomeTabbarController extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return DefaultTabController(
+        length: 2,
+        child: Scaffold(
+          backgroundColor: Colors.grey[400]!,
+          body: TabBarView(
+            children: [
+              SliverDemo(),
+              BasicWidge(),
+            ],
+          ),
+          bottomNavigationBar: JDBottomNavigationBar(),
+        ),
+    );
+  }
+}
+
+class APPOld extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -63,8 +107,8 @@ class Home extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              // JDListView(),
-              SliverDemo(),
+              JDListView(),
+              // SliverDemo(),
               // Icon(Icons.change_history, size: 128.0, color: Colors.black12,),
               BasicWidge(),
               JDLayoutWidget(),
