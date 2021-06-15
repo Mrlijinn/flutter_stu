@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'JDButtonItemDemo.dart';
 import 'PopupMenuButton.dart';
+import '../Form/JDFormWidget.dart';
+import '../Form/CheckBoxWidget.dart';
+import '../Form/JDSwitchBaseWidget.dart';
+import '../Form/JDSliderBaseWidget.dart';
+import '../Form/JDDateTimeBaseWidget.dart';
+import '../Dialog/JDDialogWidget.dart';
 
 class JDMaterialComponentsWidget extends StatelessWidget {
   const JDMaterialComponentsWidget({Key? key}) : super(key: key);
@@ -14,6 +20,12 @@ class JDMaterialComponentsWidget extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          ListItemWidget(title: "JDDialogWidget", page: JDDialogWidget()),
+          ListItemWidget(title: "JDDateTimeWidget", page: JDDateTimeBaseWidget()),
+          ListItemWidget(title: "SliderWidget", page: JDSliderBaseWidget()),
+          ListItemWidget(title: "SwitchWidget", page: JDSwitchBaseWidgetDemo()),
+          ListItemWidget(title: "CheckBoxWidget", page: CheckBoxWidget()),
+          ListItemWidget(title: "FormWidget", page: JDFormWidget()),
           ListItemWidget(title: "FlotingActionButton", page: FloatingActionButtonDemo()),
           ListItemWidget(title: "ButtonItemDemo", page: ButtonItemDemo()),
           ListItemWidget(title: "PopupMenuButtonDemo", page: PopUpMenuButtonWidget()),

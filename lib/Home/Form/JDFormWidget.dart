@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'CheckBoxWidget.dart';
 
 class JDFormWidget extends StatelessWidget {
   const JDFormWidget({Key? key}) : super(key: key);
@@ -12,6 +13,10 @@ class JDFormWidget extends StatelessWidget {
       //   ),
       //   child: ThemeDemo(),
       // ),
+      appBar: AppBar(
+        title: Text("Form"),
+        elevation: 0.0,
+      ),
       body: Theme(
         data: Theme.of(context).copyWith(
           primaryColor: Colors.yellow,
