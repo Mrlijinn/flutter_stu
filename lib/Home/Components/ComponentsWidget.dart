@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'JDButtonItemDemo.dart';
+import 'PopupMenuButton.dart';
 
 class JDMaterialComponentsWidget extends StatelessWidget {
   const JDMaterialComponentsWidget({Key? key}) : super(key: key);
@@ -15,6 +16,7 @@ class JDMaterialComponentsWidget extends StatelessWidget {
         children: [
           ListItemWidget(title: "FlotingActionButton", page: FloatingActionButtonDemo()),
           ListItemWidget(title: "ButtonItemDemo", page: ButtonItemDemo()),
+          ListItemWidget(title: "PopupMenuButtonDemo", page: PopUpMenuButtonWidget()),
         ],
       ),
     );
