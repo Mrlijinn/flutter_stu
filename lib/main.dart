@@ -10,6 +10,7 @@ import 'Home/View/JDLayout.dart';
 import 'Home/View/JDPageView.dart';
 import 'Home/View/JDSliverDemo.dart';
 import 'Home/View/JDNavigatorWidget.dart';
+import 'Home/state/JDManagement.dart';
 
 void main() => runApp(APP());
 
@@ -19,7 +20,7 @@ class APP extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: JDNavigatorWidget(),
-      initialRoute: '/components',
+      initialRoute: '/state-management',
       routes: {
         '/': (context) => JDNavigatorWidget(),
         '/tab': (context) => HomeTabbarController(),
@@ -27,6 +28,7 @@ class APP extends StatelessWidget {
         '/home': (context) => PageWidget(title: 'Home'),
         '/form': (context) => JDFormWidget(),
         '/components': (context) => JDMaterialComponentsWidget(),
+        '/state-management': (context) => StateManagementDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.red,
