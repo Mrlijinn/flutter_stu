@@ -11,6 +11,11 @@ import '../Dialog/JDAlertDialogWidget.dart';
 import '../Dialog/JDBottomSheetWidget.dart';
 import '../Dialog/JDSnackBarWidget.dart';
 import '../Dialog/JDExpansionPanelWidget.dart';
+import '../Chip/JDChipWidget.dart';
+import '../DataTable/JDDataTableWidget.dart';
+import '../JDPaginatedDataTableWidget/JDPaginatedDataTableWidget.dart';
+import '../JDCardWidget/JDCardWidget.dart';
+import '../JDStepperWidget/JDStepperWidget.dart';
 
 class JDMaterialComponentsWidget extends StatelessWidget {
   const JDMaterialComponentsWidget({Key? key}) : super(key: key);
@@ -24,7 +29,12 @@ class JDMaterialComponentsWidget extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          ListItemWidget(title: "JDSnackBarWidget", page: JDExpansionPanelWidget()),
+          ListItemWidget(title: 'JDStepperWidget', page: JDStepperWidget()),
+          ListItemWidget(title: 'JDCardWidget', page: JDCardWidget()),
+          ListItemWidget(title: 'JDPaginatedDataTableWidget', page: JDPaginatedDataTableWidget()),
+          ListItemWidget(title: 'JDDataTableWidget', page: JDDataTableWidget()),
+          ListItemWidget(title: "JDChipWidget", page: JDChipWidget()),
+          ListItemWidget(title: "JDExpansionPanelWidget", page: JDExpansionPanelWidget()),
           ListItemWidget(title: "JDSnackBarWidget", page: JDSnackBarWidget()),
           ListItemWidget(title: "JDBottomSheetWidget", page: JDBottomSheetWidget()),
           ListItemWidget(title: "JDAlertWidget", page: JDAlertWidget()),
