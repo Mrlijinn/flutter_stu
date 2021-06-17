@@ -7,6 +7,10 @@ import '../Form/JDSwitchBaseWidget.dart';
 import '../Form/JDSliderBaseWidget.dart';
 import '../Form/JDDateTimeBaseWidget.dart';
 import '../Dialog/JDDialogWidget.dart';
+import '../Dialog/JDAlertDialogWidget.dart';
+import '../Dialog/JDBottomSheetWidget.dart';
+import '../Dialog/JDSnackBarWidget.dart';
+import '../Dialog/JDExpansionPanelWidget.dart';
 
 class JDMaterialComponentsWidget extends StatelessWidget {
   const JDMaterialComponentsWidget({Key? key}) : super(key: key);
@@ -20,6 +24,10 @@ class JDMaterialComponentsWidget extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          ListItemWidget(title: "JDSnackBarWidget", page: JDExpansionPanelWidget()),
+          ListItemWidget(title: "JDSnackBarWidget", page: JDSnackBarWidget()),
+          ListItemWidget(title: "JDBottomSheetWidget", page: JDBottomSheetWidget()),
+          ListItemWidget(title: "JDAlertWidget", page: JDAlertWidget()),
           ListItemWidget(title: "JDDialogWidget", page: JDDialogWidget()),
           ListItemWidget(title: "JDDateTimeWidget", page: JDDateTimeBaseWidget()),
           ListItemWidget(title: "SliderWidget", page: JDSliderBaseWidget()),
